@@ -5,7 +5,7 @@ public class CalculatorModel {
     private String[] operands;      //stores the users first and second operand
     private double memoryVal;       //the value stored in memory
     private double lastResult;      //stores last result from carying out an operator on the calculator
-    private int curOperand;         //tells which operand is being operated on
+    public int curOperand;         //tells which operand is being operated on
     private int curOperator;        //tells current operator (0:+, 1:-, 2:*, 3:/, 4:sqr, 5:sqrt, -1: nothing)
     private boolean memBool;        //tells if the equal button has just been pressed
 
