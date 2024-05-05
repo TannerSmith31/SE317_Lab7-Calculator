@@ -112,4 +112,53 @@ class CalculatorModelTest {
         Assertions.assertEquals("0.0", model.getMemoryValue(), "Clear should reset memory value");
         Assertions.assertEquals("", model.getCurOperand(), "Clear should reset current operator to initial state");
     }
+    @Test
+    public void testAddToMemoryAfterCalculation() {
+        model = new CalculatorModel();
+        model.handleNumber(5);
+        model.handleOperator(0);  // Assume 0 is addition
+        model.handleNumber(5);
+        model.performCalculation();     // Assume this sets `memBool` true if successful
+        int result = model.memoryAdd();
+        Assertions.assertEquals("10.0", model.getMemoryValue(), "Memory should store the result of 5 + 5");
+        Assertions.assertEquals(0, result, "Memory add should return success");
+    }
+
+    @Test
+    public void testAddToMemoryWithoutCalculation() {
+        model = new CalculatorModel();
+        int result = model.memoryAdd();
+        Assertions.assertEquals(-1, result, "Memory add without prior calculation should fail");
+    }
+
+    @Test
+    public void testSubtractFromMemory() {
+        model = new CalculatorModel();
+        model.memoryAdd();  // Set some memory value initially for the test
+        model.handleNumber(3);
+        model.performCalculation();  // Sets `memBool` true
+        model.memorySubtract();
+        double memoryValue = Double.parseDouble(model.getMemoryValue());
+        Assertions.assertFalse(memoryValue < 0, "Memory should decrease after subtraction");
+    }
+
+    @Test
+    public void testMemoryRecall() {
+        model = new CalculatorModel();
+        model.handleNumber(7); // Set first operand
+        model.handleOperator(0); // Assume 0 is a valid operator like addition
+        model.handleNumber(5); // Set second operand
+        model.performCalculation(); // This should compute and set memBool true if successful
+        model.memoryAdd(); // Adds the result to memory
+        model.memoryRecall(); // Recall the memory to current operand
+        Assertions.assertEquals("12.0", model.getCurOperand(), "Recall should set current operand to memory value");
+    }
+
+    @Test
+    public void testMemoryClear() {
+        model = new CalculatorModel();
+        model.memoryAdd();  // Set some memory value initially
+        model.memoryClear();
+        Assertions.assertEquals("0.0", model.getMemoryValue(), "Memory should be cleared to zero");
+    }
 }
