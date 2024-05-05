@@ -161,4 +161,102 @@ class CalculatorModelTest {
         model.memoryClear();
         Assertions.assertEquals("0.0", model.getMemoryValue(), "Memory should be cleared to zero");
     }
+    @Test
+    public void testHandleValidOperator() {
+        model = new CalculatorModel();
+        int result = model.handleOperator(1); // Test subtraction, a valid operator
+        Assertions.assertEquals(0, result, "Valid operator should return 0");
+        Assertions.assertEquals(1, model.curOperator, "Operator should be set to subtraction");
+    }
+
+    @Test
+    public void testRejectSequentialOperators() {
+        model = new CalculatorModel();
+        model.handleOperator(1); // Set an operator
+        int result = model.handleOperator(2); // Try to set another operator immediately
+        Assertions.assertEquals(-1, result, "Should return -1 when trying to set another operator without equals");
+    }
+
+    @Test
+    public void testHandleInvalidOperator() {
+        model = new CalculatorModel();
+        int result = model.handleOperator(6); // Invalid operator
+        Assertions.assertEquals(-1, result, "Invalid operator should return -1");
+    }
+
+    @Test
+    public void testAddition() {
+        model = new CalculatorModel();
+        model.handleNumber(5);
+        model.handleOperator(0); // Assuming 0 represents addition
+        model.handleNumber(3);
+        model.performCalculation();
+        Assertions.assertEquals("8.0", model.getLastResult(), "Addition of 5 and 3 should be 8");
+    }
+
+    @Test
+    public void testSubtraction() {
+        model = new CalculatorModel();
+        model.handleNumber(10);
+        model.handleOperator(1); // Assuming 1 represents subtraction
+        model.handleNumber(4);
+        model.performCalculation();
+        Assertions.assertEquals("6.0", model.getLastResult(), "Subtraction of 4 from 10 should be 6");
+    }
+
+    @Test
+    public void testMultiplication() {
+        model = new CalculatorModel();
+        model.handleNumber(7);
+        model.handleOperator(2); // Assuming 2 represents multiplication
+        model.handleNumber(6);
+        model.performCalculation();
+        Assertions.assertEquals("42.0", model.getLastResult(), "Multiplication of 7 and 6 should be 42");
+    }
+
+    @Test
+    public void testDivision() {
+        model = new CalculatorModel();
+        model.handleNumber(8);
+        model.handleOperator(3); // Assuming 3 represents division
+        model.handleNumber(2);
+        model.performCalculation();
+        Assertions.assertEquals("4.0", model.getLastResult(), "Division of 8 by 2 should be 4");
+    }
+
+    @Test
+    public void testDivisionByZero() {
+        model = new CalculatorModel();
+        model.handleNumber(10);
+        model.handleOperator(3); // Assuming 3 represents division
+        model.handleNumber(0);
+        model.performCalculation();
+        Assertions.assertEquals("Infinity", model.getLastResult(), "Division by zero should return an error");
+    }
+
+    @Test
+    public void testSquare() {
+        model = new CalculatorModel();
+        model.handleNumber(4);
+        model.handleOperator(4); // Square
+        Assertions.assertEquals("16.0", model.performCalculation(), "Square of 4 should be 16");
+    }
+
+    @Test
+    public void testSquareRoot() {
+        model = new CalculatorModel();
+        model.handleNumber(9);
+        model.handleOperator(5); // Square Root
+        Assertions.assertEquals("3.0", model.performCalculation(), "Square root of 9 should be 3");
+    }
+
+    @Test
+    public void testInvalidOperator() {
+        model = new CalculatorModel();
+        model.handleNumber(10);
+        model.handleOperator(-1); // Invalid operator
+        model.handleNumber(5);
+        model.performCalculation();
+        Assertions.assertEquals("0.0", model.getLastResult(), "Invalid operator should return an empty");
+    }
 }

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ee092b7d-d243-45bc-96a1-03c40564b30a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CalculatorModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,41 +79,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorModelTest.testAddToMemoryWithoutCalculation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorModelTest.testDivisionByZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SE317Calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
-      <option name="METHOD_NAME" value="testAddToMemoryWithoutCalculation" />
+      <option name="METHOD_NAME" value="testDivisionByZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorModelTest.testMemoryClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorModelTest.testInvalidOperator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SE317Calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
-      <option name="METHOD_NAME" value="testMemoryClear" />
+      <option name="METHOD_NAME" value="testInvalidOperator" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorModelTest.testMemoryRecall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorModelTest.testSquare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SE317Calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
-      <option name="METHOD_NAME" value="testMemoryRecall" />
+      <option name="METHOD_NAME" value="testSquare" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorModelTest.testSubtractFromMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorModelTest.testSquareRoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SE317Calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
-      <option name="METHOD_NAME" value="testSubtractFromMemory" />
+      <option name="METHOD_NAME" value="testSquareRoot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,10 +122,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CalculatorModelTest" />
-        <item itemvalue="JUnit.CalculatorModelTest.testMemoryRecall" />
-        <item itemvalue="JUnit.CalculatorModelTest.testMemoryClear" />
-        <item itemvalue="JUnit.CalculatorModelTest.testSubtractFromMemory" />
-        <item itemvalue="JUnit.CalculatorModelTest.testAddToMemoryWithoutCalculation" />
+        <item itemvalue="JUnit.CalculatorModelTest.testDivisionByZero" />
+        <item itemvalue="JUnit.CalculatorModelTest.testSquare" />
+        <item itemvalue="JUnit.CalculatorModelTest.testSquareRoot" />
+        <item itemvalue="JUnit.CalculatorModelTest.testInvalidOperator" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713883758422</updated>
       <workItem from="1713883759449" duration="31801000" />
-      <workItem from="1714919636567" duration="1722000" />
+      <workItem from="1714919636567" duration="3432000" />
     </task>
     <servers />
   </component>
