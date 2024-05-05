@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee092b7d-d243-45bc-96a1-03c40564b30a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CalculatorModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SE317Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SE317Calculator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculatorModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +69,43 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorModelTest.testOperatorInputWithIncompleteFirstOperand">
-    <configuration name="CalculatorUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CalculatorUI" />
+  <component name="RunManager" selected="JUnit.CalculatorModelTest.testClear">
+    <configuration name="CalculatorModelTest.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SE317Calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
+      <option name="METHOD_NAME" value="testClear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorModelTest.testDeleteEmptyOperand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SE317Calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
+      <option name="METHOD_NAME" value="testDeleteEmptyOperand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorModelTest.testDeleteLastCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SE317Calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
+      <option name="METHOD_NAME" value="testDeleteLastCharacter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorModelTest.testDeleteSingleCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SE317Calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculatorModelTest" />
+      <option name="METHOD_NAME" value="testDeleteSingleCharacter" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,8 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorModelTest.testClear" />
+        <item itemvalue="JUnit.CalculatorModelTest.testDeleteSingleCharacter" />
+        <item itemvalue="JUnit.CalculatorModelTest.testDeleteLastCharacter" />
+        <item itemvalue="JUnit.CalculatorModelTest.testDeleteEmptyOperand" />
         <item itemvalue="JUnit.CalculatorModelTest.testOperatorInputWithIncompleteFirstOperand" />
-        <item itemvalue="Application.CalculatorUI" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713883758422</updated>
       <workItem from="1713883759449" duration="31801000" />
-      <workItem from="1714919636567" duration="707000" />
+      <workItem from="1714919636567" duration="1023000" />
     </task>
     <servers />
   </component>

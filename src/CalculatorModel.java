@@ -253,5 +253,6 @@ public class CalculatorModel {
     public String getMemoryValue(){
         return Double.toString(memoryVal);
     }
+    public int getCurOperator(){return  curOperator;}
 
 }

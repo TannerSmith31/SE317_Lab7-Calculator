@@ -77,4 +77,39 @@ class CalculatorModelTest {
         Assertions.assertEquals(0, result, "Adding a decimal to an empty operand should format correctly");
         Assertions.assertEquals(".",model.getCurOperand(),"Operand should start with '.'");
     }
+    @Test
+    public void testDeleteSingleCharacter() {
+        model = new CalculatorModel();
+        model.handleNumber(1);
+        model.delete();
+        Assertions.assertEquals("", model.getCurOperand(), "Deleting the only character should empty the operand");
+    }
+
+    @Test
+    public void testDeleteLastCharacter() {
+        model = new CalculatorModel();
+        model.handleNumber(1);
+        model.handleNumber(2);
+        model.handleNumber(3);
+        model.delete();
+        Assertions.assertEquals("12", model.getCurOperand(), "Deleting last character should leave '12'");
+    }
+
+    @Test
+    public void testDeleteEmptyOperand() {
+        model = new CalculatorModel();
+        model.delete();
+        Assertions.assertEquals("", model.getCurOperand(), "Deleting from an empty operand should do nothing");
+    }
+    @Test
+    public void testClear() {
+        model = new CalculatorModel();
+        model.handleNumber(1);
+        model.handleOperator(0); // Assume 0 is an operator like addition
+        model.handleNumber(2);
+        model.clear();
+        Assertions.assertEquals("", model.getCurOperand(), "Clear should reset current operand");
+        Assertions.assertEquals("0.0", model.getMemoryValue(), "Clear should reset memory value");
+        Assertions.assertEquals("", model.getCurOperand(), "Clear should reset current operator to initial state");
+    }
 }
